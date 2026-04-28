@@ -1,8 +1,12 @@
 # CREATI · Dream Builders
 
+[![Deployed on Vercel](https://img.shields.io/badge/Vercel-deployed-black?logo=vercel)](https://creati-web.vercel.app)
+[![Made in Mexico](https://img.shields.io/badge/Made_in-México_🇲🇽-orange)](#)
+
 Sitio web oficial de **CREATI**, agencia mexicana de producción integral de eventos: bodas, bodas LGBTQ+, congresos, conciertos, corporativos y experiencias tech.
 
-🌐 **Live:** https://creati.mx
+🌐 **Producción:** https://creati-web.vercel.app
+🔧 **Auto-deploy:** cada push a `main` se despliega automáticamente vía Vercel ↔ GitHub
 
 ## Stack
 

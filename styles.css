@@ -423,22 +423,55 @@ section{ padding: 140px 0; position: relative; }
   position: absolute; inset: 0; pointer-events: none; z-index: 1;
 }
 .chip{
-  position: absolute; padding: 10px 18px; border-radius: 999px;
-  background: rgba(255,255,255,0.06); border: 1px solid var(--line-2);
-  backdrop-filter: blur(20px);
-  font-size: .85rem; font-weight: 500;
+  --chip-color: rgba(255,255,255,.4);
+  position: absolute;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: rgba(15,15,24,.55);
+  border: 1px solid var(--chip-color);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  font-size: .82rem; font-weight: 500;
+  letter-spacing: -.005em;
   white-space: nowrap;
-  animation: floatChip 8s ease-in-out infinite;
+  color: rgba(255,255,255,.94);
+  box-shadow: 0 6px 24px -10px rgba(0,0,0,.6),
+              0 0 0 0 var(--chip-color);
+  animation: floatChip 9s ease-in-out infinite;
+  will-change: transform;
+  transform: translateZ(0);
 }
-.chip--1{ top: 20%; right: 10%; animation-delay: 0s; }
-.chip--2{ top: 32%; right: 25%; animation-delay: .8s; border-color: rgba(236,72,153,.4); }
-.chip--3{ top: 58%; right: 6%; animation-delay: 1.6s; border-color: rgba(6,182,212,.4); }
-.chip--4{ top: 70%; right: 20%; animation-delay: 2.4s; }
-.chip--5{ top: 16%; right: 40%; animation-delay: 3.2s; border-color: rgba(139,92,246,.4); }
-.chip--6{ top: 48%; right: 38%; animation-delay: 1.2s; border-color: rgba(251,191,36,.4); }
+
+/* Posiciones — distribuidas en el lado derecho del hero,
+   evitando el área de título (izquierda) y stats (centro-bajo) */
+.chip--1 { top: 14%; right: 5%;  --chip-color: rgba(236,72,153,.55);  animation-delay: 0s;    }
+.chip--2 { top: 22%; right: 22%; --chip-color: rgba(139,92,246,.55);  animation-delay: 1.1s;  }
+.chip--3 { top: 18%; right: 39%; --chip-color: rgba(6,182,212,.55);   animation-delay: 2.2s;  }
+.chip--4 { top: 28%; right: 8%;  --chip-color: rgba(247,147,30,.6);   animation-delay: 3.3s;  }
+.chip--5 { top: 32%; right: 30%; --chip-color: rgba(139,92,246,.55);  animation-delay: .6s;   }
+.chip--6 { top: 38%; right: 16%; --chip-color: rgba(251,191,36,.6);   animation-delay: 1.7s;  }
+.chip--7 { top: 42%; right: 36%; --chip-color: rgba(236,72,153,.55);  animation-delay: 2.8s;  }
+.chip--8 { top: 46%; right: 4%;  --chip-color: rgba(6,182,212,.55);   animation-delay: 4s;    }
+.chip--9 { top: 52%; right: 24%; --chip-color: rgba(247,147,30,.6);   animation-delay: 1.4s;  }
+.chip--10{ top: 56%; right: 42%; --chip-color: rgba(139,92,246,.55);  animation-delay: 2.5s;  }
+.chip--11{ top: 60%; right: 10%; --chip-color: rgba(236,72,153,.55);  animation-delay: 3.6s;  }
+.chip--12{ top: 64%; right: 32%; --chip-color: rgba(6,182,212,.55);   animation-delay: .9s;   }
+.chip--13{ top: 70%; right: 6%;  --chip-color: rgba(251,191,36,.6);   animation-delay: 2s;    }
+.chip--14{ top: 72%; right: 22%; --chip-color: rgba(247,147,30,.6);   animation-delay: 3.1s;  }
+.chip--15{ top: 76%; right: 40%; --chip-color: rgba(139,92,246,.55);  animation-delay: 4.2s;  }
+.chip--16{ top: 80%; right: 14%; --chip-color: rgba(236,72,153,.55);  animation-delay: 1.3s;  }
+.chip--17{ top: 84%; right: 30%; --chip-color: rgba(6,182,212,.55);   animation-delay: 2.4s;  }
+.chip--18{ top: 88%; right: 8%;  --chip-color: rgba(247,147,30,.6);   animation-delay: 3.5s;  }
+
 @keyframes floatChip{
-  0%,100%{ transform: translateY(0) rotate(-2deg); }
-  50%{ transform: translateY(-14px) rotate(2deg); }
+  0%,100%{ transform: translateY(0) rotate(-1.5deg); }
+  50%    { transform: translateY(-12px) rotate(1.5deg); }
+}
+
+@media (max-width: 1280px){
+  /* Pantallas medianas: ocultamos los más cercanos al título */
+  .chip--3, .chip--7, .chip--10, .chip--15, .chip--17{ display: none; }
+  .chip{ font-size: .78rem; padding: 8px 14px; }
 }
 @media (max-width: 1100px){ .float-chips{ display: none; } }
 

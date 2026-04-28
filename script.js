@@ -16,17 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
   let lenis;
   if (window.Lenis && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     lenis = new Lenis({
-      lerp: 0.09,            // smooth interpolation (0.1 ≈ ~150ms catch-up)
-      wheelMultiplier: 1.05, // a touch quicker than native
+      lerp: 0.12,            // catch-up más rápido (~110ms) — se siente nativo, sin lag
+      wheelMultiplier: 1,    // delta natural del wheel
       touchMultiplier: 1.5,
       smoothWheel: true,
-      syncTouch: false,      // native momentum on mobile = much smoother
+      syncTouch: false,      // momentum nativo en móvil
     });
     function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
     requestAnimationFrame(raf);
     if (window.gsap && window.ScrollTrigger) {
       lenis.on('scroll', ScrollTrigger.update);
-      gsap.ticker.lagSmoothing(0);
+      // Sin lagSmoothing: dejamos que GSAP corrija el lag normalmente
     }
   }
 
@@ -210,17 +210,36 @@ document.addEventListener('DOMContentLoaded', () => {
     card.addEventListener('mouseleave', () => { card.style.transform = ''; });
   });
 
-  /* ============================== ORBS PARALLAX ============================== */
+  /* ============================== ORBS PARALLAX (rAF-throttled) ==============================
+     Antes hacía style.transform en cada mousemove (200+ events/seg). Ahora 1 ticker rAF
+     y solo cuando el hero está visible — evita trabajo innecesario al scrollear. */
   const orbs = document.querySelectorAll('.orb');
-  if (orbs.length && window.matchMedia('(min-width: 901px)').matches) {
+  const hero = document.querySelector('.hero');
+  if (orbs.length && hero && window.matchMedia('(min-width: 901px)').matches) {
+    let mx = 0, my = 0, tx = 0, ty = 0, heroVisible = true, ticking = false;
+    const heroIO = new IntersectionObserver(([e]) => { heroVisible = e.isIntersecting; }, { threshold: 0 });
+    heroIO.observe(hero);
+
     window.addEventListener('mousemove', e => {
-      const x = (e.clientX / window.innerWidth) - 0.5;
-      const y = (e.clientY / window.innerHeight) - 0.5;
+      if (!heroVisible) return;
+      mx = (e.clientX / window.innerWidth) - 0.5;
+      my = (e.clientY / window.innerHeight) - 0.5;
+      if (!ticking) { ticking = true; requestAnimationFrame(syncOrbs); }
+    }, { passive: true });
+
+    function syncOrbs(){
+      tx += (mx - tx) * 0.08;
+      ty += (my - ty) * 0.08;
       orbs.forEach((o, i) => {
-        const f = (i + 1) * 18;
-        o.style.transform = `translate(${x * f}px, ${y * f}px)`;
+        const f = (i + 1) * 14;
+        o.style.transform = `translate3d(${tx * f}px, ${ty * f}px, 0)`;
       });
-    });
+      ticking = false;
+      // re-arm si seguimos cerca del target
+      if (Math.abs(mx - tx) > 0.001 || Math.abs(my - ty) > 0.001){
+        ticking = true; requestAnimationFrame(syncOrbs);
+      }
+    }
   }
 
   /* ============================== PROCESS TIMELINE ============================== */
@@ -241,16 +260,17 @@ document.addEventListener('DOMContentLoaded', () => {
     tlIO.observe(tl);
   }
 
-  /* ============================== HERO PARALLAX SCROLL ============================== */
+  /* ============================== HERO PARALLAX SCROLL ==============================
+     Solo el fade-out de los chips al hacer scroll (lo demás compite con el mousemove parallax).
+     Quitamos los scrubs sobre orbs que duplicaban trabajo. */
   if (window.gsap && window.ScrollTrigger) {
     gsap.registerPlugin(ScrollTrigger);
-
-    gsap.to('.orb--1', { yPercent: 40, scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
-    gsap.to('.orb--2', { yPercent: -30, scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
-    gsap.to('.float-chips', { yPercent: -15, opacity: 0, scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
-
+    gsap.to('.float-chips', {
+      yPercent: -10, opacity: 0,
+      scrollTrigger: { trigger: '.hero', start: 'top top', end: '60% top', scrub: 1 }
+    });
     gsap.to('.footer__big-bg', {
-      yPercent: -20,
+      yPercent: -15,
       scrollTrigger: { trigger: '.footer', start: 'top bottom', end: 'bottom top', scrub: 1 }
     });
   }

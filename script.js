@@ -16,14 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
   let lenis;
   if (window.Lenis && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
     lenis = new Lenis({
-      duration: 1.2,
-      easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      lerp: 0.09,            // smooth interpolation (0.1 ≈ ~150ms catch-up)
+      wheelMultiplier: 1.05, // a touch quicker than native
+      touchMultiplier: 1.5,
       smoothWheel: true,
+      syncTouch: false,      // native momentum on mobile = much smoother
     });
     function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
     requestAnimationFrame(raf);
     if (window.gsap && window.ScrollTrigger) {
       lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.lagSmoothing(0);
     }
   }
 

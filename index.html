@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CREATI · Eventos, Congresos y Convenciones | Dream Builders México</title>
+  <meta name="description" content="Producción de eventos de clase mundial en México. Bodas, bodas LGBTQ+, congresos, conciertos, corporativos. Tecnología, audiovisual, montaje y planeación premium." />
+  <meta name="theme-color" content="#0A0A0F" />
+  <meta name="keywords" content="eventos México, bodas, bodas LGBTQ, congresos, conciertos, producción de eventos, CDMX, Guadalajara, Monterrey, catering premium, audiovisual, video mapping, NFC, agencia de eventos" />
+  <meta name="author" content="CREATI · Dream Builders" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+  <link rel="canonical" href="https://creati.mx/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="CREATI · Producción de Eventos de Clase Mundial en México" />
+  <meta property="og:description" content="Bodas, bodas LGBTQ+, congresos, conciertos y experiencias tech. Diseño, audiovisual, tecnología y coordinación total. Dream Builders México." />
+  <meta property="og:url" content="https://creati.mx/" />
+  <meta property="og:image" content="https://creati.mx/og-image.jpg" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:site_name" content="CREATI" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CREATI · Producción de Eventos de Clase Mundial" />
+  <meta name="twitter:description" content="Bodas, bodas LGBTQ+, congresos, conciertos y experiencias tech en México." />
+  <meta name="twitter:image" content="https://creati.mx/og-image.jpg" />
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EventVenue",
+    "name": "CREATI",
+    "alternateName": "CREATI Dream Builders",
+    "description": "Agencia mexicana de producción integral de eventos: bodas, bodas LGBTQ+, congresos, conciertos, corporativo y experiencias tech.",
+    "url": "https://creati.mx",
+    "telephone": "+52-55-1234-5678",
+    "email": "hola@creati.mx",
+    "address": [
+      {"@type":"PostalAddress","addressLocality":"CDMX","addressCountry":"MX"},
+      {"@type":"PostalAddress","addressLocality":"Guadalajara","addressCountry":"MX"},
+      {"@type":"PostalAddress","addressLocality":"Monterrey","addressCountry":"MX"}
+    ],
+    "sameAs": ["https://instagram.com/creati.mx","https://tiktok.com/@creati.mx"],
+    "aggregateRating": {"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"500"}
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+</head>
+<body>
+
+  <!-- ╔══════════════════════════════════════ LOADER ══════════════════════════════════════╗ -->
+  <div class="loader" id="loader">
+    <div class="loader__inner">
+      <div class="loader__bulb">
+        <svg viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg">
+          <g class="bulb-rays">
+            <line x1="50" y1="5" x2="50" y2="18" stroke="#F7931E" stroke-width="3" stroke-linecap="round"/>
+            <line x1="20" y1="20" x2="28" y2="30" stroke="#EC4899" stroke-width="3" stroke-linecap="round"/>
+            <line x1="80" y1="20" x2="72" y2="30" stroke="#06B6D4" stroke-width="3" stroke-linecap="round"/>
+            <line x1="10" y1="50" x2="22" y2="50" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round"/>
+            <line x1="90" y1="50" x2="78" y2="50" stroke="#FBBF24" stroke-width="3" stroke-linecap="round"/>
+          </g>
+          <path d="M50 30 C 30 30, 22 50, 30 70 C 35 80, 40 85, 40 95 L60 95 C60 85, 65 80, 70 70 C 78 50, 70 30, 50 30 Z" fill="rgba(255,255,255,0.06)" stroke="#fff" stroke-width="1.5"/>
+          <rect x="42" y="100" width="16" height="6" fill="#0A0A0F" stroke="#fff" stroke-width="1.5"/>
+          <rect x="44" y="108" width="12" height="6" fill="#0A0A0F" stroke="#fff" stroke-width="1.5"/>
+          <circle cx="42" cy="55" r="2" fill="#EC4899"/>
+          <circle cx="58" cy="65" r="2" fill="#06B6D4"/>
+          <circle cx="50" cy="78" r="2" fill="#FBBF24"/>
+          <circle cx="38" cy="70" r="2" fill="#8B5CF6"/>
+        </svg>
+      </div>
+      <div class="loader__bar"><span></span></div>
+      <p class="loader__text">Encendiendo la magia<span class="dots"><i>.</i><i>.</i><i>.</i></span></p>
+    </div>
+  </div>
+
+  <!-- ╔══════════════════════════════════════ CURSOR ══════════════════════════════════════╗ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- ╔══════════════════════════════════════ NAV ══════════════════════════════════════╗ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__logo">
+        <span class="logo-mark">
+          <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 6 C 12 6, 8 14, 12 22 C 14 26, 16 28, 16 32 L24 32 C 24 28, 26 26, 28 22 C 32 14, 28 6, 20 6 Z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+            <rect x="17" y="33" width="6" height="2" fill="currentColor"/>
+            <circle cx="17" cy="16" r="1.4" fill="#EC4899"/>
+            <circle cx="23" cy="20" r="1.4" fill="#06B6D4"/>
+            <circle cx="20" cy="25" r="1.4" fill="#FBBF24"/>
+          </svg>
+        </span>
+        <span class="logo-text">CREATI<i>.</i></span>
+      </a>
+
+      <nav class="nav__links">
+        <a href="#servicios" data-link>Servicios</a>
+        <a href="#eventos" data-link>Eventos</a>
+        <a href="#paquetes" data-link>Paquetes</a>
+        <a href="#portafolio" data-link>Portafolio</a>
+        <a href="#venues" data-link>Venues</a>
+        <a href="#insights" data-link>Insights</a>
+      </nav>
+
+      <a href="#contacto" class="btn btn--primary nav__cta" data-magnetic>
+        <span>Cotizar mi evento</span>
+        <svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <button class="nav__burger" id="burger" aria-label="Menú">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#paquetes">Paquetes</a>
+      <a href="#portafolio">Portafolio</a>
+      <a href="#venues">Venues</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#insights">Insights</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a href="#contacto" class="btn btn--primary">Cotizar mi evento →</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ╔══════════════════════════════════════ HERO ══════════════════════════════════════╗ -->
+    <section class="hero">
+      <div class="hero__bg">
+        <div class="orb orb--1"></div>
+        <div class="orb orb--2"></div>
+        <div class="orb orb--3"></div>
+        <div class="orb orb--4"></div>
+        <div class="grid-overlay"></div>
+        <div class="noise"></div>
+      </div>
+
+      <div class="hero__inner">
+        <div class="hero__badge" data-reveal>
+          <span class="pulse"></span>
+          <span>Dream Builders · México 2026</span>
+        </div>
+
+        <h1 class="hero__title">
+          <span class="line"><span>Diseñamos</span></span>
+          <span class="line"><span>experiencias <em>extraordinarias</em></span></span>
+          <span class="line"><span>que se quedan</span></span>
+          <span class="line"><span>en la <span class="grad-text">memoria</span> para siempre.</span></span>
+        </h1>
+
+        <p class="hero__sub" data-reveal>
+          Producción de eventos de clase mundial. Bodas, bodas LGBTQ+, corporativos, congresos, conciertos y experiencias tech. Diseño, audiovisual, tecnología y coordinación total — todo bajo un mismo equipo.
+        </p>
+
+        <div class="hero__ctas" data-reveal>
+          <a href="#contacto" class="btn btn--primary btn--lg" data-magnetic>
+            <span>Empieza tu evento</span>
+            <svg viewBox="0 0 24 24" width="20" height="20"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#portafolio" class="btn btn--ghost btn--lg" data-magnetic>
+            <span class="play"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
+            Ver portafolio
+          </a>
+        </div>
+
+        <div class="hero__stats" data-reveal>
+          <div><b data-count="500">0</b><span>Eventos producidos</span></div>
+          <div class="div"></div>
+          <div><b data-count="98">0</b><i>%</i><span>Satisfacción cliente</span></div>
+          <div class="div"></div>
+          <div><b data-count="150">0</b><i>+</i><span>Bodas LGBTQ+</span></div>
+          <div class="div"></div>
+          <div><b data-count="24">0</b><i>h</i><span>Respuesta garantizada</span></div>
+        </div>
+
+        <div class="hero__scroll">
+          <span>Descubre</span>
+          <div class="scroll-line"><div></div></div>
+        </div>
+      </div>
+
+      <!-- Floating chips -->
+      <div class="float-chips">
+        <div class="chip chip--1">💍 Bodas</div>
+        <div class="chip chip--2">🏳️‍🌈 LGBTQ+</div>
+        <div class="chip chip--3">🎤 Conciertos</div>
+        <div class="chip chip--4">🏢 Corporativo</div>
+        <div class="chip chip--5">🤖 Tech & VR</div>
+        <div class="chip chip--6">🥂 Catering</div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════ MARQUEE ══════════════════════════════════════╗ -->
+    <section class="marquee">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span>Bodas Soñadas</span><i>✦</i>
+          <span>Bodas LGBTQ+</span><i>✦</i>
+          <span>Congresos</span><i>✦</i>
+          <span>Conciertos</span><i>✦</i>
+          <span>Activaciones de Marca</span><i>✦</i>
+          <span>Tecnología NFC</span><i>✦</i>
+          <span>Mapping 360°</span><i>✦</i>
+          <span>Catering Premium</span><i>✦</i>
+          <span>Iluminación Arquitectónica</span><i>✦</i>
+        </div>
+        <div class="marquee__group" aria-hidden="true">
+          <span>Bodas Soñadas</span><i>✦</i>
+          <span>Bodas LGBTQ+</span><i>✦</i>
+          <span>Congresos</span><i>✦</i>
+          <span>Conciertos</span><i>✦</i>
+          <span>Activaciones de Marca</span><i>✦</i>
+          <span>Tecnología NFC</span><i>✦</i>
+          <span>Mapping 360°</span><i>✦</i>
+          <span>Catering Premium</span><i>✦</i>
+          <span>Iluminación Arquitectónica</span><i>✦</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════ TRUSTED BY ══════════════════════════════════════╗ -->
+    <section class="trust">
+      <div class="container">
+        <p class="trust__title" data-reveal>Trabajamos con las marcas y venues más exigentes de México</p>
+        <div class="trust__logos">
+          <span>Four Seasons</span>
+          <span>St. Regis</span>
+          <span>Live Aqua</span>
+          <span>Banyan Tree</span>
+          <span>Westin</span>
+          <span>Presidente InterContinental</span>
+          <span>Marquis Reforma</span>
+          <span>Grand Velas</span>
+          <span>Camino Real</span>
+          <span>Hyatt Regency</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════ INTRO / NOSOTROS ══════════════════════════════════════╗ -->
+    <section class="intro" id="nosotros">
+      <div class="container">
+        <div class="intro__grid">
+          <div>
+            <span class="eyebrow" data-reveal>✦ Nosotros</span>
+            <h2 class="h2" data-reveal-words>
+              No planeamos eventos.
+              <em>Construimos sueños</em> con arquitectura,
+              tecnología y un toque de magia.
+            </h2>
+          </div>
+          <div class="intro__copy">
+            <p data-reveal>
+              CREATI es una agencia mexicana de producción integral con sede en CDMX, Guadalajara y Monterrey. Trabajamos con los mejores hoteles, venues, chefs, artistas y proveedores del país para entregar experiencias que se sienten auténticas, se ven impresionantes y se recuerdan para siempre.
+            </p>
+            <p data-reveal>
+              Aplicamos nuestro método propietario <b>Dream-to-Delivery™</b> en cada proyecto: 5 fases estructuradas que combinan creatividad, tecnología real y ejecución impecable. Sin improvisar.
+            </p>
+            <ul class="intro__list" data-reveal>
+              <li><span>01</span> Concepto creativo personalizado por cliente</li>
+              <li><span>02</span> Renders 3D antes del evento</li>
+              <li><span>03</span> Tecnología que aporta valor real</li>
+              <li><span>04</span> Inclusión auténtica, no performativa</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════ SERVICIOS ══════════════════════════════════════╗ -->
+    <section class="services" id="servicios">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow" data-reveal>✦ Lo que hacemos</span>
+          <h2 class="h2" data-reveal-words>
+            Todo en un solo lugar.
+            <em>Concepto, producción y ejecución</em> de clase mundial.
+          </h2>
+        </header>
+
+        <div class="services__grid">
+          <article class="service-card" data-tilt>
+            <div class="service-card__num">01</div>
+            <div class="service-card__icon"><span>✨</span></div>
+            <h3>Concepto Creativo & Narrativa</h3>
+            <p>Diseñamos la historia de tu evento. Cada elemento tiene un propósito y conecta emocionalmente con tus invitados.</p>
+            <span class="service-card__plus">+</span>
+          </article>
+
+          <article class="service-card" data-tilt>
+            <div class="service-card__num">02</div>
+            <div class="service-card__icon"><span>🎬</span></div>
+            <h3>Producción Audiovisual Pro</h3>
+            <p>Iluminación arquitectónica, video mapping, streaming 4K y show control tipo concierto. Producción que impacta.</p>
+            <span class="service-card__plus">+</span>
+          </article>
+
+          <article class="service-card" data-tilt>
+            <div class="service-card__num">03</div>
+            <div class="service-card__icon"><span>📋</span></div>
+            <h3>Coordinación Total del Día</h3>
+            <p>Cronogramas al minuto, gestión de proveedores, permisos y ejecución impecable. Tú solo disfrutas.</p>
+            <span class="service-card__plus">+</span>
+          </article>
+
+          <article class="service-card" data-tilt>
+            <div class="service-card__num">04</div>
+            <div class="service-card__icon"><span>🥂</span></div>
+            <h3>Experiencias Gastronómicas</h3>
+            <p>Catering personalizado, showcooking, coffee bars y mixología que sorprende. Sabor con espectáculo.</p>
+            <span class="service-card__plus">+</span>
+          </article>
+
+          <article class="service-card" data-tilt>
+            <div class="service-card__num">05</div>
+            <div class="service-card__icon"><span>🎤</span></div>
+            <h3>Entretenimiento de Alto Nivel</h3>
+            <p>Música en vivo, DJs internacionales, performances y artistas sorpresa. Entretenimiento que marca la diferencia.</p>
+            <span class="service-card__plus">+</span>
+          </article>
+
+          <article class="service-card" data-tilt>
+            <div class="service-card__num">06</div>
+            <div class="service-card__icon"><span>📊</span></div>
+            <h3>Estrategia & Resultados</h3>
+            <p>Para marcas: activaciones, engagement, métricas y ROI. Eventos que generan impacto medible.</p>
+            <span class="service-card__plus">+</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════ TIPOS DE EVENTOS ══════════════════════════════════════╗ -->
+    <section class="events" id="eventos">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow" data-reveal>✦ Tipos de eventos</span>
+          <h2 class="h2" data-reveal-words>
+            Cada celebración merece <em>su propio universo.</em>
+          </h2>
+        </header>
+
+        <div class="events__tabs" id="eventTabs">
+          <button class="tab is-active" data-tab="bodas">Bodas</button>
+          <button class="tab" data-tab="lgbt">Bodas LGBTQ+</button>
+          <button class="tab" data-tab="corp">Corporativo</button>
+          <button class="tab" data-tab="tech">Tech & Activaciones</button>
+          <button class="tab" data-tab="social">Social Premium</button>
+          <button class="tab" data-tab="conciertos">Conciertos</button>
+        </div>
+
+        <div class="events__panels">
+          <div class="event-panel is-active" data-panel="bodas">
+            <div class="event-panel__media">
+              <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1400&q=80" alt="Boda elegante CREATI" loading="lazy"/>
+              <div class="event-panel__overlay"></div>
+              <span class="event-panel__tag">Amor sin límites</span>
+            </div>
+            <div class="event-panel__copy">
+              <h3>Bodas diseñadas para emocionar</h3>
+              <p>Bodas tradicionales con diseño personalizado, escenografía a la medida, iluminación arquitectónica, catering premium y coordinación total. Cada detalle de tu historia, transformado en experiencia.</p>
+              <ul>
+                <li>✦ Concepto creativo único por pareja</li>
+                <li>✦ Renders 3D del montaje</li>
+                <li>✦ Catering & mixología personalizada</li>
+                <li>✦ Coordinación total del día</li>
+                <li>✦ Aftermovie cinematográfico</li>
+              </ul>
+              <a href="#contacto" class="btn btn--primary" data-magnetic><span>Cotizar mi boda</span> →</a>
+            </div>
+          </div>
+
+          <div class="event-panel" data-panel="lgbt">
+            <div class="event-panel__media">
+              <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1400&q=80" alt="Boda LGBTQ+ CREATI" loading="lazy"/>
+              <div class="event-panel__overlay"></div>
+              <span class="event-panel__tag">🏳️‍🌈 Pride · Real Inclusion</span>
+            </div>
+            <div class="event-panel__copy">
+              <h3>Bodas LGBTQ+ con orgullo y elegancia</h3>
+              <p>+150 bodas LGBTQ+ producidas. Equipo capacitado en sensibilidad, proveedores aliados verificados y un ambiente seguro, celebratorio y auténtico para que cada invitado brille.</p>
+              <ul>
+                <li>✦ Equipo aliado certificado</li>
+                <li>✦ Proveedores LGBTQ+ friendly verificados</li>
+                <li>✦ Diseño que celebra su historia</li>
+                <li>✦ Venues que reciben con orgullo</li>
+                <li>✦ Cobertura editorial y aftermovie</li>
+              </ul>
+              <a href="#contacto" class="btn btn--primary" data-magnetic><span>Diseñar nuestra boda</span> →</a>
+            </div>
+          </div>
+
+          <div class="event-panel" data-panel="corp">
+            <div class="event-panel__media">
+              <img src="https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=1400&q=80" alt="Evento corporativo CREATI" loading="lazy"/>
+              <div class="event-panel__overlay"></div>
+              <span class="event-panel__tag">500+ asistentes</span>
+            </div>
+            <div class="event-panel__copy">
+              <h3>Eventos que posicionan marcas</h3>
+              <p>Congresos, convenciones, lanzamientos y experiencias internas con producción de nivel internacional. Streaming, mapping, escenarios a medida y métricas de engagement en tiempo real.</p>
+              <ul>
+                <li>✦ Pantallas LED & proyección mapping</li>
+                <li>✦ Streaming multi-cámara 4K</li>
+                <li>✦ Registro NFC & check-in inteligente</li>
+                <li>✦ Gestión de speakers & talento</li>
+                <li>✦ Reportes & data analytics</li>
+              </ul>
+              <a href="#contacto" class="btn btn--primary" data-magnetic><span>Cotizar evento corporativo</span> →</a>
+            </div>
+          </div>
+
+          <div class="event-panel" data-panel="tech">
+            <div class="event-panel__media">
+              <img src="https://images.unsplash.com/photo-1626379953822-baec19c3accd?w=1400&q=80" alt="Experiencia tech VR" loading="lazy"/>
+              <div class="event-panel__overlay"></div>
+              <span class="event-panel__tag">Next Gen Experience</span>
+            </div>
+            <div class="event-panel__copy">
+              <h3>Innovación que se vive</h3>
+              <p>Robots interactivos, brazaletes NFC, realidad virtual, hologramas, mapping 360° y escenarios tipo festival. Tecnología real que amplifica la experiencia y deja huella.</p>
+              <ul>
+                <li>✦ Robots de bienvenida & bartender</li>
+                <li>✦ Pagos cashless con NFC</li>
+                <li>✦ Activaciones VR & AR inmersivas</li>
+                <li>✦ Mapping 360° & hologramas</li>
+                <li>✦ Heatmaps & analytics post-evento</li>
+              </ul>
+              <a href="#contacto" class="btn btn--primary" data-magnetic><span>Diseñar experiencia tech</span> →</a>
+            </div>
+          </div>
+
+          <div class="event-panel" data-panel="social">
+            <div class="event-panel__media">
+              <img src="https://images.unsplash.com/photo-1530023367847-a683933f4172?w=1400&q=80" alt="Evento social premium" loading="lazy"/>
+              <div class="event-panel__overlay"></div>
+              <span class="event-panel__tag">Premium Social</span>
+            </div>
+            <div class="event-panel__copy">
+              <h3>Celebraciones que marcan momentos</h3>
+              <p>Graduaciones, cumpleaños premium, fiestas temáticas, XV años, aniversarios y eventos privados con dirección creativa, producción musical y experiencias interactivas que sorprenden.</p>
+              <ul>
+                <li>✦ Diseño temático 360°</li>
+                <li>✦ DJs y bandas en vivo</li>
+                <li>✦ Iluminación dinámica & efectos</li>
+                <li>✦ Photobooth premium & activaciones</li>
+                <li>✦ Aftermovie cinematográfico</li>
+              </ul>
+              <a href="#contacto" class="btn btn--primary" data-magnetic><span>Cotizar mi celebración</span> →</a>
+            </div>
+          </div>
+
+          <div class="event-panel" data-panel="conciertos">
+            <div class="event-panel__media">
+              <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1400&q=80" alt="Conciertos CREATI" loading="lazy"/>
+              <div class="event-panel__overlay"></div>
+              <span class="event-panel__tag">Live Production</span>
+            </div>
+            <div class="event-panel__copy">
+              <h3>Conciertos & festivales nivel internacional</h3>
+              <p>Producción en vivo con escenario, line array, riggings, video walls, control de show y logística total. Manejamos desde shows íntimos hasta festivales de gran formato.</p>
+              <ul>
+                <li>✦ Escenarios modulares & rigging</li>
+                <li>✦ Audio line array profesional</li>
+                <li>✦ Video walls & cámaras IMAG</li>
+                <li>✦ Booking & gestión de artistas</li>
+                <li>✦ Permisos, seguridad & logística</li>
+              </ul>
+              <a href="#contacto" class="btn btn--primary" data-magnetic><span>Cotizar mi concierto</span> →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════ VENUES ══════════════════════════════════════╗ -->
+    <section class="venues" id="venues">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow" data-reveal>✦ Venues premium</span>
+          <h2 class="h2" data-reveal-words>
+            Acceso exclusivo a los <em>mejores espacios</em> de México.
+          </h2>
+          <p class="lead" data-reveal>Alianzas con hoteles de lujo, salones de gran formato, haciendas, beach clubs y rooftops icónicos. Si tu venue soñado existe, lo conseguimos.</p>
+        </header>
+
+        <div class="venues__grid">
+          <article class="venue" data-tilt>
+            <div class="venue__img">
+              <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=900&q=80" alt="Hoteles de lujo" loading="lazy"/>
+              <span class="venue__loc">CDMX · Polanco</span>
+            </div>
+            <h3>Hoteles de Lujo 5★</h3>
+            <p>Four Seasons, St. Regis, Live Aqua, Westin, Marquis Reforma, Camino Real, Hyatt Regency.</p>
+            <ul>
+              <li>Salones desde 50 hasta 1,200 pax</li>
+              <li>Catering del propio hotel u open</li>
+              <li>Hospedaje VIP para invitados</li>
+            </ul>
+          </article>
+
+          <article class="venue" data-tilt>
+            <div class="venue__img">
+              <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=900&q=80" alt="Haciendas" loading="lazy"/>
+              <span class="venue__loc">Querétaro · Tequisquiapan</span>
+            </div>
+            <h3>Haciendas Históricas</h3>
+            <p>Haciendas coloniales y fincas de viñedo en Querétaro, Puebla, Mérida y Valle de Bravo.</p>
+            <ul>
+              <li>Eventos al aire libre & ceremonia</li>
+              <li>Hasta 600 invitados</li>
+              <li>Hospedaje boutique on-site</li>
+            </ul>
+          </article>
+
+          <article class="venue" data-tilt>
+            <div class="venue__img">
+              <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=900&q=80" alt="Beach Clubs" loading="lazy"/>
+              <span class="venue__loc">Riviera Maya · Los Cabos</span>
+            </div>
+            <h3>Beach Clubs & Destination</h3>
+            <p>Bodas frente al mar en Cancún, Tulum, Los Cabos, Vallarta. Logística internacional incluida.</p>
+            <ul>
+              <li>Ceremonia en playa privada</li>
+              <li>Welcome kits & traslados VIP</li>
+              <li>Bloqueo hotelero para invitados</li>
+            </ul>
+          </article>
+
+          <article class="venue" data-tilt>
+            <div class="venue__img">
+              <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=900&q=80" alt="Rooftops & Centros de Convenciones" loading="lazy"/>
+              <span class="venue__loc">CDMX · GDL · MTY</span>
+            </div>
+            <h3>Centros de Convenciones</h3>
+            <p>Citibanamex, Expo Guadalajara, Cintermex, World Trade Center. Para congresos y expos masivas.</p>
+            <ul>
+              <li>Capacidad 1,000–10,000 pax</li>
+              <li>Audio, video y rigging profesional</li>
+              <li>Logística & permisos completos</li>
+            </ul>
+          </article>
+
+          <article class="venue" data-tilt>
+            <div class="venue__img">
+              <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=80" alt="Rooftops" loading="lazy"/>
+              <span class="venue__loc">Roma · Polanco · Reforma</span>
+            </div>
+            <h3>Rooftops & Penthouses</h3>
+            <p>Terrazas urbanas con vista a la ciudad. Eventos privados, lanzamientos de marca y after-parties.</p>
+            <ul>
+              <li>50–300 invitados</li>
+              <li>Vista 360° a la ciudad</li>
+              <li>Cocteles & DJ live</li>
+            </ul>
+          </article>
+
+          <article class="venue" data-tilt>
+            <div class="venue__img">
+              <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=900&q=80" alt="Espacios industriales y galerías" loading="lazy"/>
+              <span class="venue__loc">Roma · Juárez · Doctores</span>
+            </div>
+            <h3>Lofts, Galerías & Industrial</h3>
+            <p>Espacios alternativos con personalidad: galerías de arte, lofts industriales, naves transformables.</p>
+            <ul>
+              <li>Lienzo en blanco para diseño</li>
+              <li>Producción inmersiva</li>
+              <li>Ideal para activaciones de marca</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════ DIFERENCIADORES ══════════════════════════════════════╗ -->
+    <section class="diff">
+      <div class="container">
+        <header class="section-head section-head--center">
+          <span class="eyebrow" data-reveal>✦ Diferenciadores clave</span>
+          <h2 class="h2" data-reveal-words>
+            ¿Por qué elegir <em>CREATI</em>?
+          </h2>
+        </header>
+
+        <div class="diff__grid">
+          <div class="diff-card">
+            <div class="diff-card__num">98<i>%</i></div>
+            <h3>Tasa de satisfacción</h3>
+            <p>Metodología propietaria <b>Dream Builders Method™</b>: 5 fases estructuradas que garantizan ejecución impecable. No improvisamos, diseñamos.</p>
+          </div>
+          <div class="diff-card">
+            <div class="diff-card__num">100<i>%</i></div>
+            <h3>Garantía de calidad total</h3>
+            <p>Proveedores pre-auditados, seguros de responsabilidad civil y planes B y C documentados. Tu evento está protegido en todos los escenarios.</p>
+          </div>
+          <div class="diff-card">
+            <div class="diff-card__num">+150</div>
+            <h3>Bodas LGBTQ+ producidas</h3>
+            <p>Inclusión real, no performativa. Equipo capacitado en sensibilidad y proveedores aliados verificados. Tu celebración será segura y auténtica.</p>
+          </div>
+          <div class="diff-card">
+            <div class="diff-card__num">24<i>h</i></div>
+            <h3>Respuesta garantizada</h3>
+            <p>Primera consulta sin costo. Te respondemos en menos de 24 horas con propuesta personalizada en 48–72h, transparente y sin costos ocultos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════ PAQUETES ══════════════════════════════════════╗ -->
+    <section class="packages" id="paquetes">
+      <div class="container">
+        <header class="section-head section-head--center">
+          <span class="eyebrow" data-reveal>✦ Elige tu experiencia</span>
+          <h2 class="h2" data-reveal-words>
+            Tres niveles. <em>Infinitas posibilidades.</em>
+          </h2>
+          <p class="lead" data-reveal>Cada paquete es completamente personalizable según la visión y escala de tu evento.</p>
+        </header>
+
+        <div class="pkg-grid">
+
+          <article class="pkg pkg--essential" data-tilt>
+            <header>
+              <span class="pkg__tag">Essential</span>
+              <h3>Elegancia que enamora.</h3>
+              <p>Perfecto para celebraciones íntimas con producción profesional impecable.</p>
+            </header>
+            <ul>
+              <li>✓ Coordinación base profesional</li>
+              <li>✓ Producción estándar elegante</li>
+              <li>✓ Catering adaptable</li>
+              <li>✓ Staff operativo</li>
+              <li>✓ Timeline & layout</li>
+            </ul>
+            <a href="#contacto" class="btn btn--ghost" data-magnetic><span>Cotizar este nivel</span> →</a>
+          </article>
+
+          <article class="pkg pkg--signature" data-tilt>
+            <div class="pkg__star">⭐ Más elegido</div>
+            <header>
+              <span class="pkg__tag">Signature</span>
+              <h3>La experiencia completa.</h3>
+              <p>Diseño, producción premium y tecnología integrada que impresiona.</p>
+            </header>
+            <ul>
+              <li>✓ Concepto creativo + moodboard</li>
+              <li>✓ Producción pro + escenografía</li>
+              <li>✓ Tecnología integrada (NFC)</li>
+              <li>✓ Gestión de talento</li>
+              <li>✓ Plan operativo + showcall</li>
+              <li>✓ Fotografía profesional</li>
+            </ul>
+            <a href="#contacto" class="btn btn--primary" data-magnetic><span>Cotizar este nivel</span> →</a>
+          </article>
+
+          <article class="pkg pkg--iconic" data-tilt>
+            <header>
+              <span class="pkg__tag">Iconic</span>
+              <h3>Alto impacto absoluto.</h3>
+              <p>Experiencia inmersiva luxury que nadie olvidará jamás.</p>
+            </header>
+            <ul>
+              <li>✓ Dirección creativa total</li>
+              <li>✓ Producción inmersiva alto impacto</li>
+              <li>✓ NFC avanzado + data analytics</li>
+              <li>✓ Streaming pro + PR</li>
+              <li>✓ Aftermovie cinematográfico</li>
+              <li>✓ Plan de contingencia + KPIs</li>
+              <li>✓ Robots interactivos</li>
+            </ul>
+            <a href="#contacto" class="btn btn--ghost" data-magnetic><span>Cotizar este nivel</span> →</a>
+          </article>
+        </div>
+
+        <p class="pkg-foot" data-reveal>¿No estás seguro qué nivel necesitas? Cuéntanos tu visión y te recomendamos. <a href="#contacto">Hablemos →</a></p>
+      </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════ PORTAFOLIO ══════════════════════════════════════╗ -->
+    <section class="portfolio" id="portafolio">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow" data-reveal>✦ Portafolio</span>
+          <h2 class="h2" data-reveal-words>
+            Cada evento es único. <em>Cada experiencia es irrepetible.</em>
+          </h2>
+        </header>
+
+        <div class="port-grid">
+          <a class="port-item port-item--lg" href="#contacto" data-tilt>
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80" alt="Boda elegante" loading="lazy"/>
+            <div class="port-item__info">
+              <span>Boda Elegante</span>
+              <h4>Ceremonia premium · CDMX</h4>
+            </div>
+          </a>
+          <a class="port-item" href="#contacto" data-tilt>
+            <img src="https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=900&q=80" alt="Conferencia global" loading="lazy"/>
+            <div class="port-item__info">
+              <span>Conferencia Global</span>
+              <h4>Evento corporativo</h4>
+            </div>
+          </a>
+          <a class="port-item" href="#contacto" data-tilt>
+            <img src="https://images.unsplash.com/photo-1530023367847-a683933f4172?w=900&q=80" alt="Celebración premium" loading="lazy"/>
+            <div class="port-item__info">
+              <span>Celebración Premium</span>
+              <h4>Social · GDL</h4>
+            </div>
+          </a>
+          <a class="port-item" href="#contacto" data-tilt>
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&q=80" alt="Seminario empresarial" loading="lazy"/>
+            <div class="port-item__info">
+              <span>Seminario Empresarial</span>
+              <h4>Networking & conferencia</h4>
+            </div>
+          </a>
+          <a class="port-item port-item--md" href="#contacto" data-tilt>
+            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1200&q=80" alt="Recepción de boda" loading="lazy"/>
+            <div class="port-item__info">
+              <span>Recepción de Boda</span>
+              <h4>Montaje elegante · Polanco</h4>
+            </div>
+          </a>
+          <a class="port-item" href="#contacto" data-tilt>
+            <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=900&q=80" alt="Convención negocios" loading="lazy"/>
+            <div class="port-item__info">
+              <span>Convención de Negocios</span>
+              <h4>Panel & networking</h4>
+            </div>
+          </a>
+          <a class="port-item" href="#contacto" data-tilt>
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80" alt="Cena gourmet" loading="lazy"/>
+            <div class="port-item__info">
+              <span>Cena Gourmet</span>
+              <h4>Premium gastronómico</h4>
+            </div>
+          </a>
+          <a class="port-item" href="#contacto" data-tilt>
+            <img src="https://images.unsplash.com/photo-1626379953822-baec19c3accd?w=900&q=80" alt="Experiencia VR" loading="lazy"/>
+            <div class="port-item__info">
+              <span>Experiencia VR</span>
+              <h4>Activación tech · Roma</h4>
+            </div>
+          </a>
+        </div>
+
+        <div class="portfolio__cta" data-reveal>
+          <a href="#contacto" class="btn btn--primary btn--lg" data-magnetic>
+            <span>Quiero algo así para mi evento</span>
+            <svg viewBox="0 0 24 24" width="20" height="20"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════ PROCESO ══════════════════════════════════════╗ -->
+    <section class="process" id="proceso">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow" data-reveal>✦ Nuestro proceso</span>
+          <h2 class="h2" data-reveal-words>
+            Metodología <em>Dream-to-Delivery™</em>
+          </h2>
+          <p class="lead" data-reveal>De la idea a la realidad: un proceso probado que garantiza emoción, control y excelencia en cada etapa.</p>
+        </header>
+
+        <div class="process__timeline" id="processTL">
+          <div class="process__bar"><span></span></div>
+
+          <div class="step" data-step="1">
+            <div class="step__num">01</div>
+            <h3>Dream Brief</h3>
+            <p>Escuchamos tu visión, entendemos tu esencia y definimos juntos el concepto perfecto para tu evento.</p>
+            <ul>
+              <li>Reunión estratégica inicial</li>
+              <li>Definición de objetivos & mood</li>
+              <li>Propuesta conceptual personalizada</li>
+            </ul>
+          </div>
+
+          <div class="step" data-step="2">
+            <div class="step__num">02</div>
+            <h3>Dream Design</h3>
+            <p>Diseñamos cada detalle visual y experiencial. Te mostramos cómo se verá tu evento antes de que suceda.</p>
+            <ul>
+              <li>Renders 3D del espacio</li>
+              <li>Paleta de colores y materiales</li>
+              <li>Moodboards & visualizaciones</li>
+            </ul>
+          </div>
+
+          <div class="step" data-step="3">
+            <div class="step__num">03</div>
+            <h3>Dream Production</h3>
+            <p>Coordinamos a todos los proveedores premium, gestionamos logística y preparamos cada elemento con excelencia.</p>
+            <ul>
+              <li>Gestión de proveedores premium</li>
+              <li>Coordinación logística total</li>
+              <li>Control de calidad riguroso</li>
+            </ul>
+          </div>
+
+          <div class="step" data-step="4">
+            <div class="step__num">04</div>
+            <h3>Dream Execution</h3>
+            <p>El día del evento, nuestro equipo ejecuta cada detalle a la perfección. Tú disfrutas, nosotros controlamos todo.</p>
+            <ul>
+              <li>Coordinación en tiempo real</li>
+              <li>Montaje & producción impecable</li>
+              <li>Gestión de imprevistos</li>
+            </ul>
+          </div>
+
+          <div class="step" data-step="5">
+            <div class="step__num">05</div>
+            <h3>Dream Memory</h3>
+            <p>Tu evento se convierte en recuerdo eterno. Entregamos contenido audiovisual profesional para revivir el momento.</p>
+            <ul>
+              <li>Aftermovie cinematográfico</li>
+              <li>Fotografía profesional editada</li>
+              <li>Reportes & métricas (corporativos)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════ TECNOLOGÍA ══════════════════════════════════════╗ -->
+    <section class="tech">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow" data-reveal>✦ Tecnología</span>
+          <h2 class="h2" data-reveal-words>
+            Tecnología que <em>transforma</em> experiencias y genera resultados.
+          </h2>
+        </header>
+
+        <div class="tech__grid">
+          <div class="tech-card" data-tilt>
+            <span class="tech-card__chip">NFC</span>
+            <h3>Tecnología NFC</h3>
+            <p>Accesos sin contacto, control de consumo en tiempo real, captura de leads y data valiosa para tu evento.</p>
+            <ul>
+              <li>→ Acreditación inteligente</li>
+              <li>→ Pagos cashless</li>
+              <li>→ Captura de datos & analytics</li>
+            </ul>
+          </div>
+          <div class="tech-card" data-tilt>
+            <span class="tech-card__chip">Robots</span>
+            <h3>Robots interactivos</h3>
+            <p>Experiencias memorables que impresionan. Robots que interactúan, entretienen y posicionan tu marca.</p>
+            <ul>
+              <li>→ Interacción con asistentes</li>
+              <li>→ Shows & presentaciones</li>
+              <li>→ Experiencia wow garantizada</li>
+            </ul>
+          </div>
+          <div class="tech-card" data-tilt>
+            <span class="tech-card__chip">AV Pro</span>
+            <h3>Audiovisual inmersivo</h3>
+            <p>Producción audiovisual con show control, iluminación arquitectónica y streaming profesional 4K.</p>
+            <ul>
+              <li>→ Show control & sincronización</li>
+              <li>→ Iluminación & escenografía</li>
+              <li>→ Streaming & aftermovie</li>
+            </ul>
+          </div>
+          <div class="tech-card" data-tilt>
+            <span class="tech-card__chip">VR / AR</span>
+            <h3>Experiencias inmersivas</h3>
+            <p>Realidad virtual, mapping 360°, hologramas y proyecciones interactivas que activan a tu audiencia.</p>
+            <ul>
+              <li>→ Mapping 360° & hologramas</li>
+              <li>→ Activaciones VR</li>
+              <li>→ Realidad aumentada</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════ TESTIMONIOS ══════════════════════════════════════╗ -->
+    <section class="testimonials">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow" data-reveal>✦ Testimonios</span>
+          <h2 class="h2" data-reveal-words>
+            Lo que dicen <em>nuestros clientes.</em>
+          </h2>
+        </header>
+
+        <div class="t-grid">
+          <article class="t-card">
+            <span class="t-tag t-tag--lgbt">🏳️‍🌈 Boda LGBTQ+</span>
+            <p>“CREATI hizo realidad nuestra boda soñada. Cada detalle fue perfecto y la coordinación impecable. Nosotras solo disfrutamos mientras ellos se encargaban de absolutamente todo.”</p>
+            <footer>
+              <div class="t-avatar">M&A</div>
+              <div><b>María & Andrea</b><span>Boda LGBTQ+ · CDMX</span></div>
+            </footer>
+          </article>
+
+          <article class="t-card t-card--featured">
+            <span class="t-tag">🏢 Corporativo</span>
+            <p>“Organizamos nuestra convención anual con CREATI y el resultado superó toda expectativa. La producción audiovisual fue de nivel internacional con más de 500 asistentes.”</p>
+            <footer>
+              <div class="t-avatar">RC</div>
+              <div><b>Roberto Campos</b><span>Director · Tech Solutions Inc.</span></div>
+            </footer>
+          </article>
+
+          <article class="t-card">
+            <span class="t-tag t-tag--social">🎉 Social</span>
+            <p>“La fiesta de XV años de mi hija fue un sueño hecho realidad. CREATI transformó el venue completamente con una producción digna de revista.”</p>
+            <footer>
+              <div class="t-avatar">LP</div>
+              <div><b>Laura Pérez</b><span>XV Años Premium · GDL</span></div>
+            </footer>
+          </article>
+
+          <article class="t-card">
+            <span class="t-tag">💍 Boda Destino</span>
+            <p>“Desde el primer día sentimos que CREATI entendía nuestra visión. Los renders que nos mostraron fueron exactos a la realidad. Un equipo profesional de principio a fin.”</p>
+            <footer>
+              <div class="t-avatar">D&S</div>
+              <div><b>Diego & Sofía</b><span>Boda Destino · MTY</span></div>
+            </footer>
+          </article>
+
+          <article class="t-card t-card--featured">
+            <span class="t-tag t-tag--tech">🤖 Tech</span>
+            <p>“El lanzamiento de nuestro producto fue un éxito gracias a CREATI. La experiencia inmersiva con VR y mapping sorprendió a todos. Tecnología perfectamente integrada.”</p>
+            <footer>
+              <div class="t-avatar">AM</div>
+              <div><b>Ana Martínez</b><span>CMO · Innovation Lab</span></div>
+            </footer>
+          </article>
+
+          <article class="t-card">
+            <span class="t-tag">🏢 Corporativo</span>
+            <p>“Llevamos 3 años trabajando con CREATI para nuestros eventos anuales y siempre superan expectativas. Confiables, creativos y entregan resultados medibles.”</p>
+            <footer>
+              <div class="t-avatar">JG</div>
+              <div><b>Jorge González</b><span>VP Marketing · Global Corp</span></div>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════ INSIGHTS / BLOG ══════════════════════════════════════╗ -->
+    <section class="insights" id="insights">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow" data-reveal>✦ Insights & tendencias</span>
+          <h2 class="h2" data-reveal-words>
+            Inspiración para tu <em>próximo evento.</em>
+          </h2>
+          <p class="lead" data-reveal>Tendencias, guías prácticas y secretos de la industria para que tu evento sea inolvidable.</p>
+        </header>
+
+        <div class="insights__grid">
+          <a href="#contacto" class="insight" data-tilt>
+            <div class="insight__media">
+              <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=80" alt="Tendencias de bodas 2026" loading="lazy"/>
+              <span class="insight__cat insight__cat--bodas">💍 Bodas</span>
+            </div>
+            <div class="insight__body">
+              <div class="insight__meta"><time>15 Ene 2026</time><span>5 min lectura</span></div>
+              <h3>10 tendencias de bodas 2026: de la intimidad al maximalismo</h3>
+              <p>Las bodas post-pandemia encuentran su equilibrio entre lo íntimo y lo espectacular. Descubre qué estilos dominarán este año.</p>
+              <span class="insight__more">Leer artículo →</span>
+            </div>
+          </a>
+
+          <a href="#contacto" class="insight" data-tilt>
+            <div class="insight__media">
+              <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=900&q=80" alt="Tecnología en eventos corporativos" loading="lazy"/>
+              <span class="insight__cat insight__cat--corp">🏢 Corporativo</span>
+            </div>
+            <div class="insight__body">
+              <div class="insight__meta"><time>10 Ene 2026</time><span>7 min lectura</span></div>
+              <h3>Cómo integrar tecnología en eventos sin perder la experiencia humana</h3>
+              <p>NFC, apps interactivas, streaming 4K... la tecnología puede potenciar tu evento o arruinarlo. Te contamos cómo usarla bien.</p>
+              <span class="insight__more">Leer artículo →</span>
+            </div>
+          </a>
+
+          <a href="#contacto" class="insight" data-tilt>
+            <div class="insight__media">
+              <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=900&q=80" alt="Producción de evento corporativo" loading="lazy"/>
+              <span class="insight__cat insight__cat--prod">🎬 Producción</span>
+            </div>
+            <div class="insight__body">
+              <div class="insight__meta"><time>5 Ene 2026</time><span>6 min lectura</span></div>
+              <h3>Behind the scenes: cómo se produce un evento de 500 personas</h3>
+              <p>Te llevamos detrás de cámaras de nuestra última producción corporativa. Del briefing al desmontaje: la anatomía de un evento perfecto.</p>
+              <span class="insight__more">Leer artículo →</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="newsletter" data-reveal>
+          <div>
+            <h3>¿Quieres recibir más insights exclusivos?</h3>
+            <p>Únete a +2,500 profesionales y organizadores. Tendencias, guías y ofertas especiales cada mes. Cero spam.</p>
+          </div>
+          <form class="newsletter__form" onsubmit="event.preventDefault(); alert('¡Gracias! Recibirás nuestro próximo insight.'); this.reset();">
+            <input type="email" required placeholder="tu@correo.com" />
+            <button type="submit" class="btn btn--primary" data-magnetic>Suscribirme →</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════ FAQ ══════════════════════════════════════╗ -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="faq__grid">
+          <header>
+            <span class="eyebrow" data-reveal>✦ Resolvemos tus dudas</span>
+            <h2 class="h2" data-reveal-words>Preguntas <em>frecuentes</em></h2>
+            <p class="lead">Todo lo que necesitas saber sobre nuestros servicios y proceso de producción.</p>
+            <a href="#contacto" class="btn btn--primary" data-magnetic><span>Hablar con un asesor</span> →</a>
+          </header>
+
+          <div class="faq__list">
+            <details>
+              <summary>¿Cuánto tiempo antes debo contactarlos para mi evento?<span>+</span></summary>
+              <div>Lo ideal es contactarnos con 6–12 meses de anticipación para eventos grandes (bodas, congresos, corporativos +200 personas). Para eventos más pequeños o sociales, 3–4 meses es suficiente. También manejamos producciones exprés según disponibilidad.</div>
+            </details>
+            <details>
+              <summary>¿Trabajan en toda la República Mexicana?<span>+</span></summary>
+              <div>Sí, producimos eventos en todo México. Bases principales en CDMX, Guadalajara y Monterrey, con red de proveedores certificados en destinos clave (Cancún, Los Cabos, Vallarta) y ciudades principales.</div>
+            </details>
+            <details>
+              <summary>¿Puedo contratar solo algunos servicios?<span>+</span></summary>
+              <div>Totalmente flexible. Puedes contratar módulos individuales (audiovisual, coordinación, diseño floral) o producción integral. Los paquetes Essential, Signature e Iconic son personalizables.</div>
+            </details>
+            <details>
+              <summary>¿Cómo funciona el proceso de cotización?<span>+</span></summary>
+              <div>1) Completas el formulario o nos contactas por WhatsApp. 2) Agendamos videollamada de diagnóstico (30 min). 3) Te enviamos propuesta personalizada en 48–72 h. 4) Refinamos detalles y cerramos contrato. Todo transparente, sin costos ocultos.</div>
+            </details>
+            <details>
+              <summary>¿Qué incluye la coordinación el día del evento?<span>+</span></summary>
+              <div>Coordinador general + asistentes según el tamaño, montaje y supervisión de proveedores, timeline ejecutivo al minuto, resolución de imprevistos en tiempo real y desmontaje supervisado. Tú disfrutas, nosotros ejecutamos.</div>
+            </details>
+            <details>
+              <summary>¿Tienen experiencia con eventos LGBTQ+?<span>+</span></summary>
+              <div>Absolutamente. +150 bodas y eventos LGBTQ+ producidos con sensibilidad, respeto y creatividad. Equipo capacitado en inclusión real y red de proveedores aliados verificados que garantizan un ambiente seguro y celebratorio.</div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ╔══════════════════════════════════════ CTA / CONTACTO ══════════════════════════════════════╗ -->
+    <section class="cta" id="contacto">
+      <div class="container">
+        <div class="cta__inner">
+          <div class="cta__copy">
+            <span class="eyebrow" data-reveal>✦ Tu momento es ahora</span>
+            <h2 class="h2 h2--xl" data-reveal-words>
+              Tu evento merece algo <em>extraordinario.</em>
+            </h2>
+            <p class="lead">Agenda hoy la planeación y comienza a diseñar una experiencia inolvidable. Primera consulta sin costo.</p>
+
+            <div class="cta__contact">
+              <a href="https://wa.me/525512345678" class="cta__contact-card" data-magnetic>
+                <span class="ico">💬</span>
+                <div><b>WhatsApp</b><i>+52 55 1234 5678</i></div>
+              </a>
+              <a href="mailto:hola@creati.mx" class="cta__contact-card" data-magnetic>
+                <span class="ico">✉</span>
+                <div><b>Email</b><i>hola@creati.mx</i></div>
+              </a>
+              <div class="cta__contact-card" data-magnetic>
+                <span class="ico">📍</span>
+                <div><b>Bases</b><i>CDMX · GDL · MTY</i></div>
+              </div>
+            </div>
+          </div>
+
+          <form class="quote-form" onsubmit="event.preventDefault(); alert('¡Gracias! Te contactaremos en menos de 24 horas.'); this.reset();">
+            <h3>Cotiza en 2 minutos</h3>
+            <div class="row">
+              <label><input type="text" required placeholder=" "/><span>Nombre completo</span></label>
+            </div>
+            <div class="row row--2">
+              <label><input type="email" required placeholder=" "/><span>Email</span></label>
+              <label><input type="tel" required placeholder=" "/><span>WhatsApp</span></label>
+            </div>
+            <div class="row">
+              <label class="select">
+                <select required>
+                  <option value="">Tipo de evento</option>
+                  <option>Boda</option>
+                  <option>Boda LGBTQ+</option>
+                  <option>Corporativo / Congreso</option>
+                  <option>Social / XV / Cumpleaños</option>
+                  <option>Concierto / Festival</option>
+                  <option>Tech / Activación de marca</option>
+                </select>
+                <span>Tipo de evento</span>
+              </label>
+            </div>
+            <div class="row row--2">
+              <label><input type="text" placeholder=" "/><span>Ciudad / venue</span></label>
+              <label><input type="text" placeholder=" "/><span>Fecha aproximada</span></label>
+            </div>
+            <div class="row">
+              <label><textarea rows="3" placeholder=" "></textarea><span>Cuéntanos tu visión</span></label>
+            </div>
+            <button class="btn btn--primary btn--lg" type="submit" data-magnetic>
+              <span>Enviar cotización</span>
+              <svg viewBox="0 0 24 24" width="20" height="20"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <p class="form-note">🔒 Respuesta en menos de 24 horas. Cero spam.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ╔══════════════════════════════════════ FOOTER ══════════════════════════════════════╗ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <h2 class="footer__big">
+          <span>Construyamos</span>
+          <span><em>juntos</em> tu próxima</span>
+          <span>experiencia <i>extraordinaria.</i></span>
+        </h2>
+        <a href="#contacto" class="btn btn--primary btn--lg" data-magnetic>
+          <span>Empezar ahora</span>
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#top" class="nav__logo">
+            <span class="logo-mark">
+              <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 6 C 12 6, 8 14, 12 22 C 14 26, 16 28, 16 32 L24 32 C 24 28, 26 26, 28 22 C 32 14, 28 6, 20 6 Z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                <rect x="17" y="33" width="6" height="2" fill="currentColor"/>
+              </svg>
+            </span>
+            <span class="logo-text">CREATI<i>.</i></span>
+          </a>
+          <p>Dream Builders. Transformamos sueños en experiencias inolvidables con creatividad, estructura y tecnología.</p>
+          <div class="socials">
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M14 4v9.2a3.8 3.8 0 1 1-3.8-3.8h.8M14 4h3a4 4 0 0 0 4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" width="18" height="18"><rect x="2.5" y="6" width="19" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 9.5v5l4.5-2.5z" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="18" height="18"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 4 0v4M11 10v7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4>Navegación</h4>
+          <a href="#servicios">Servicios</a>
+          <a href="#eventos">Eventos</a>
+          <a href="#paquetes">Paquetes</a>
+          <a href="#portafolio">Portafolio</a>
+          <a href="#proceso">Proceso</a>
+        </div>
+        <div class="footer__col">
+          <h4>Eventos</h4>
+          <a href="#eventos">Bodas</a>
+          <a href="#eventos">Bodas LGBTQ+</a>
+          <a href="#eventos">Corporativo</a>
+          <a href="#eventos">Conciertos</a>
+          <a href="#eventos">Tech & VR</a>
+        </div>
+        <div class="footer__col">
+          <h4>Contacto</h4>
+          <a href="mailto:hola@creati.mx">hola@creati.mx</a>
+          <a href="tel:+525512345678">+52 55 1234 5678</a>
+          <span>CDMX · GDL · MTY</span>
+          <a href="https://wa.me/525512345678" class="wa">WhatsApp directo →</a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© 2026 CREATI. Todos los derechos reservados.</span>
+        <span>Hecho con <span class="heart">♥</span> en México · Para crear experiencias extraordinarias</span>
+      </div>
+    </div>
+
+    <div class="footer__big-bg" aria-hidden="true">CREATI</div>
+  </footer>
+
+  <!-- WhatsApp floating -->
+  <a href="https://wa.me/525512345678" class="wa-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 32 32" width="28" height="28"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 2 6.5L4 29l7.7-2c1.8 1 3.8 1.5 5.9 1.5h.4C24.6 28.5 30 23.1 30 16.5S24.6 4 16 4z" fill="#25D366"/><path d="M22.4 19.6c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-.9-.8-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.6l.5-.5c.2-.2.2-.3.3-.5 0-.2 0-.4 0-.5l-.9-2.3c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1 2.9 1.2 3.1c.1.2 2 3.1 4.9 4.4.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3z" fill="#fff"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
